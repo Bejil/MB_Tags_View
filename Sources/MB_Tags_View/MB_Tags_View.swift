@@ -55,6 +55,8 @@ open class MB_Tags_View: UIView {
 	private lazy var collectionView:UICollectionView = {
 		
 		let collectionView:UICollectionView = .init(frame: .zero, collectionViewLayout: collectionViewLayout)
+		collectionView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+		collectionView.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
 		collectionView.backgroundColor = .clear
 		collectionView.delegate = self
 		collectionView.dataSource = self
