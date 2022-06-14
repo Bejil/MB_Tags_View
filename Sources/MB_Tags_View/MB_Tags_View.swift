@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-public class MB_Tags_View: UIView {
+open public class MB_Tags_View: UIView {
     
 	public var isCentered:Bool = false {
 		
@@ -89,6 +89,8 @@ public class MB_Tags_View: UIView {
 				make.height.equalTo(view.contentSize.height)
 			})
 		}
+		
+		setUp()
     }
     
     override public init(frame: CGRect) {
@@ -96,9 +98,13 @@ public class MB_Tags_View: UIView {
         super.init(frame: frame)
     }
 	
-	required init?(coder: NSCoder) {
+	required public init?(coder: NSCoder) {
 		
 		fatalError("init(coder:) has not been implemented")
+	}
+	
+	open func setUp() {
+		
 	}
 	
 	public func setSection(title:String?, atIndex index:Int = 0) {
