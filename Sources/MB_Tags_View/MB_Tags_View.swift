@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-open public class MB_Tags_View: UIView {
+open class MB_Tags_View: UIView {
     
 	public var isCentered:Bool = false {
 		
