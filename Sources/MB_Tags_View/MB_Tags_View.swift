@@ -19,6 +19,7 @@ open class MB_Tags_View: UIView {
 			collectionView.reloadData()
 		}
 	}
+	public var tagCornerRadius: CGFloat? = UI.Margins
 	public var tagFont: UIFont? = UIFont(name: Fonts.Content.Bold.fontName, size: Fonts.Content.Bold.pointSize-3)
 	public var tagTextColor: UIColor? = Colors.Text
 	public var tagSelectedTextColor: UIColor? = Colors.Text
@@ -128,6 +129,7 @@ open class MB_Tags_View: UIView {
 			tags.append(.init())
 		}
 		
+		tag.cornerRadius = tag.cornerRadius ?? tagCornerRadius
 		tag.font = tag.font ?? tagFont
 		tag.textColor = tag.textColor ?? tagTextColor
 		tag.selectedTextColor = tag.selectedTextColor ?? tagSelectedTextColor

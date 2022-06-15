@@ -19,6 +19,7 @@ class MB_TagCollectionViewCell: UICollectionViewCell {
 		
 		didSet {
 			
+			contentView.layer.cornerRadius = _tag?.cornerRadius ?? UI.Margins
 			contentStackView.layoutMargins = _tag?.edgeInsets ?? .zero
 			
 			customView.subviews.forEach({ $0.removeFromSuperview() })
@@ -128,7 +129,6 @@ class MB_TagCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
 		
 		contentView.layer.borderWidth = 1.0
-		contentView.layer.cornerRadius = UI.CornerRadius
 		contentView.backgroundColor = Colors.Gray
 		contentView.addSubview(contentStackView)
 		layer.masksToBounds = false

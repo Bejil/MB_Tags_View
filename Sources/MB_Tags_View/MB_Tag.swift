@@ -10,6 +10,7 @@ import UIKit
 public class MB_Tag: NSObject {
 	
 	public var text: String?
+	public var cornerRadius: CGFloat?
 	public var font: UIFont?
 	public var textColor: UIColor?
 	public var selectedTextColor: UIColor?
